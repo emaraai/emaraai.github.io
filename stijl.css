@@ -1,0 +1,205 @@
+html {
+    background: white;
+    background-image: white;
+}
+
+body {
+    background: white;
+    color: black;
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+    padding-top: 0px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+      
+}
+
+nav {
+    display: contents;
+    position: static;
+}
+
+a {
+    text-decoration-line: none;
+    color: #0048ff;
+    /*font-family: Hevetica, sans-serif;*/
+}
+a:hover {
+    color: #ff2600;
+    text-decoration: line-through;
+}
+
+
+p {
+    line-height: 1.2;
+    display: block;
+    
+}
+
+
+.hoofd {
+    font-family: Helvetica, sans-serif;
+    color: black;
+    font-size: 18.5px; 
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    text-align: left;
+    
+}
+
+.bijschrift {
+    font-family: Palatino, serif;
+    display: block;
+    top: 20px;
+    width: 15%;
+    font-size: 13px;
+    text-align: left; 
+    color: black;
+    height: auto;
+    line-height: normal;
+    float: left;
+    clear: none;
+}
+
+.homebij {
+    font-family: Palatino, serif;
+    display: block;
+    top: 20px;
+    width: 15%;
+    font-size: 24px;
+    text-align: left; 
+    color: black;
+    height: auto;
+    line-height: normal;
+    float: left;
+    clear: none;
+    
+}
+
+img {
+    padding: 5px;
+    
+}
+.klein {
+    width: 50%;
+    max-width: 750px;
+    height: auto;
+    float: center;
+}
+.groot {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    float: center;
+}
+
+.grootgroot {
+    width: 100%;
+    max-width: 1160px;
+    height: auto;
+    float: center;
+}
+
+
+
+.left {
+    float: left;
+    max-width: 40%;
+    height: 100%;
+    overflow: auto;
+    padding: 0.5em;
+    clear: none;
+    display: block;
+    font-family: Palatino, serif;
+    font-size: 30px;
+    
+}
+
+.right {
+    float: center;
+    max-width: 40%;
+    height: 100%;
+    margin-top: 20px;
+    overflow: auto;
+    padding: 0.5em;
+    clear: none;
+}
+
+.center {
+    float: center;
+    max-width: 80%;
+    height: 100%;
+    overflow: auto;
+    padding: 0.5em;
+    clear: none;
+}
+
+
+.imageBox {
+  position: relative;
+  float: left;
+}
+
+.imageBox .hoverImg {
+  position: absolute;
+   left: 0px;
+    top: 0px;
+  float: center;
+  display: none;
+}
+
+.imageBox:hover .hoverImg {
+  display: block;
+}
+
+.afbgrid {
+    width: 100%;
+    max-width: 580px;
+    
+    height: auto;
+    float: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 19% 19% 19% 19% 19%;
+    grid-gap: 10px;
+}
+
+/*.nested {
+    display: grid;
+    grid-auto-rows: 0.75em;
+    grid-gap: 1em;
+    grid-row: 1/4;
+}*/
+
+/*.content img {
+    margin-left: auto;
+    float: auto;
+}
+
+.content p {
+    display: block;
+    
+}*/
+
+/*.onderschrift {
+    font-family: Palatino, serif;
+    display: block;
+    font-size: 11px;
+    float: center;
+    
+}*/
+
+/* kleur
+    #2679ff : lichtblauw (flets);
+    #0048ff : helderblauw (schoon!!);
+    #ffc926 : warmgeel ;
+    #ff5226 : rood / beetje oranje;
+
+background: rgba(255,255,255,0.1); transparant
+*/
+
+
+
