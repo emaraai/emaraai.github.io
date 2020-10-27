@@ -1,0 +1,224 @@
+@font-face {
+    font-family: Gt Super;
+    src: url(GT-Super-Text-Book.otf);
+}
+@font-face {
+    font-family: Gt Super Italic;
+    src: url(GT-Super-Text-Book-Italic.otf);
+}
+
+html { 
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: none;
+    color: black;
+    width: 99%;
+    height: auto;
+}
+
+body::-webkit-scrollbar, .left::-webkit-scrollbar, .right::-webkit-scrollbar, .slider::-webkit-scrollbar, .column1::-webkit-scrollbar, .column2::-webkit-scrollbar, .column3::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    font-family: Helvetica, sans-serif;
+    text-decoration-line: none;
+    text-decoration: none;
+    color: #0048ff;
+    font-size: 14px;
+    line-height: 1.3;
+}
+a:hover {
+    color: #ff2600;
+    text-decoration: line-through;
+}
+
+p {
+    font-family: Gt Super;
+    line-height: 1.3;
+    display: block;
+    text-align: left;
+    color: black;
+    font-size: 15px;
+}
+i {
+    font-family: Gt Super Italic;
+}
+img {
+    padding: 0.5%;
+    width: 100%;
+    height: 100%;
+}
+nav p {
+    margin: 0 10px 0 0;
+    width: 20%;
+}
+.hoofd {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 90%;
+    float: left;
+    z-index: 1;   
+}
+.contact {
+    right: 0.1%;
+    float: right;
+    position: fixed;
+    z-index: 1;
+    text-align: right;
+}
+.bijschrift {
+    width: 70%;
+    line-height: 1.1;
+    font-size: 13px;
+    margin-top: 1px;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    min-height: 98%;
+}
+.column {
+    display: flex;
+    flex-direction: column;  
+}
+.carouselContainer {
+  width: 60%;
+  height: 600px;
+  margin: 0 auto;
+  padding: 3%;
+  position: relative;   
+  overflow: hidden;
+  z-index: 0;
+  top: 20%;
+}
+.carouselImgs {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+.prev, .next {
+  position: absolute;
+  top: 10%;
+  cursor: pointer;
+  color: #0048ff;
+  font-size: 30px;
+  font-family: Helvetica, sans-serif;
+  padding: 25%;
+}
+.next:hover, .prev:hover {
+    color: #ff2600;
+}
+.prev { 
+left: -10%; 
+}
+.next { 
+right: -15%;
+}
+.containerText {
+    width: 25%;
+    padding: 10% 10% 0 0;
+}
+
+#down {
+  margin-top: 0%;
+  padding-bottom: 0%;
+  max-height: 800px;
+  scroll-snap-type: y mandatory;
+ } 
+#up {
+  margin-top: 0%;
+}
+.downScroll, .upScroll {
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    left: 0.5%;
+}
+.downScroll {
+    position: sticky;
+    height: 100px;
+}
+.upScroll {
+    height: 10px;
+    position: absolute;
+    top: 97%;
+}
+
+.moreWork {
+    position: relative;
+}
+
+.groot {
+    max-width: 750px;
+    height: auto;
+}
+.left, .right {
+   height: 100%; 
+   overflow: auto;
+   padding: 0.5em 0.5em 0 0.5em;
+   clear: none;
+   position: static;
+}
+.left {
+    float: left;
+    max-width: 60%;
+}
+.right {
+    float: center;
+    max-width: 40%;  
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto; 
+}
+.slider img {
+  width: 100%;
+  height: auto
+  flex-shrink: 0;
+  max-height: 400px;
+}
+.slider img.smallImg {
+    width: 50%;
+    height: 50%;
+    max-height: 200px;
+}
+
+
+.column1, .column2, .column3 {
+   overflow: auto;
+   padding: 0.5em;
+   clear: none;
+   position: static;
+   float: left;
+   overflow: auto;
+}
+.column2 {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding-top: 1%;
+  height: 98%;
+}
+.column1 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding-top: 10%;
+    height: 82%;
+}
+.column3 {
+  display:flex;
+  flex-direction: column;
+  width: 20%;
+  padding-top: 30%;
+  height: 45%;
+}
