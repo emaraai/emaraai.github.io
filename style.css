@@ -103,6 +103,7 @@ nav p {
   align-items: center;
   justify-items: center;
   justify-content: center;
+  object-fit: none;
 }
 .prev, .next {
   position: absolute;
