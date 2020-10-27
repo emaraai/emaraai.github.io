@@ -6,12 +6,9 @@
     font-family: Gt Super Italic;
     src: url(GT-Super-Text-Book-Italic.otf);
 }
-
 html { 
     scroll-behavior: smooth;
 }
-
-
 body {
     background: none;
     color: black;
@@ -223,4 +220,98 @@ right: -15%;
   width: 20%;
   padding-top: 30%;
   height: 45%;
+}
+
+@media screen and (max-width: 600px) {
+    nav p {
+    margin: 0 10px 0 0;
+    width: 80%;
+}
+    .hoofd {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 90%;
+    float: left;
+    z-index: 1;
+    
+}
+    .insta, .mail {
+    display: none;
+}
+    .row {
+    display: flex;
+    flex-direction: column;
+    min-height: 98%;
+}
+    .carouselContainer {
+  width: 80%;
+  height: 350px;
+  margin: 5% 10% 0 10%;
+  position: relative;   
+  overflow: hidden;
+  z-index: 0;
+  padding-top: 20%;
+}
+.carouselImgs {
+  width: 90%;
+  height: auto;
+  padding: 5%;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+.prev, .next {
+  position: relative;
+  top: 20%;
+  cursor: pointer;
+  color: #0048ff;
+  font-size: 30px;
+  font-family: Helvetica, sans-serif;
+}
+.next:hover {
+    color: #ff2600;
+}
+.prev:hover {
+    color: #ff2600;
+}
+.prev { 
+left: -25%;
+position: absolute;
+padding: 150px;
+}
+.next { 
+left: 45%;
+position: absolute;
+padding: 150px;
+}
+
+.containerText {
+    width: 80%;
+    padding: 5;
+    margin: 5% 10% 0 10%;
+}
+    .column1, .column2, .column3 {
+   overflow: auto;
+   padding: 0.5em;
+   clear: none;
+   position: static;
+   width: 90%;
+   overflow: auto;
+   padding-top: 30%;
+}
+    
+.column2 {
+  height: 100%;
+}
+.column1 {
+height: 100%;
+}
+.column3 {
+  height: 100%;
+}
+
+
+
+
 }
