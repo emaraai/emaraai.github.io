@@ -177,7 +177,7 @@ img {
   align-items: center;
   justify-items: center;
   justify-content: center;
-  object-fit: cover;
+  object-fit: contain;
   overflow: hidden;
 }
 .prev, .next {
