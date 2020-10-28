@@ -260,7 +260,7 @@ right: -15%;
   position: relative;   
   overflow: hidden;
   z-index: 0;
-  padding-top: 20%;
+  padding-top: 5%;
 }
 .carouselImgs {
   width: 100%;
@@ -288,12 +288,12 @@ right: -15%;
 .prev { 
 left: 1%;
 position: absolute;
-padding: 40% 10%;
+padding: 25% 10%;
 }
 .next { 
 right: 1%;
 position: absolute;
-padding: 40% 10%;
+padding: 25% 10%;
 }
 .containerText {
     width: 80%;
