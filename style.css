@@ -273,7 +273,7 @@ right: -15%;
 }
 .carouselImgs {
   width: 100%;
-  height: 100%;
+  height: auto;
   padding: 5%;
   align-items: center;
   justify-items: center;
@@ -313,4 +313,4 @@ padding: 25% 10%;
 .column2 img, .column1 img, .column3 img{
         padding: 1% 10%;
     }
-}
+    
