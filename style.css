@@ -263,8 +263,8 @@ right: -15%;
     min-height: 98%;
 }
     .carouselContainer {
-  max-width: 80%;
-  min-height:  20%;
+  min-width: 80%;
+  min-height: 30%;
   margin: 5% 10% 0 10%;
   position: relative;   
   overflow: hidden;
@@ -306,8 +306,8 @@ position: absolute;
 padding: 25% 10%;
 }
 .containerText {
-    width: 80%;
-    padding: 1%;
+width: 80%;
+    padding: 3%;
     margin: 1% 10% 0 10%;
 }
 .column2 img, .column1 img, .column3 img{
