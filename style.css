@@ -176,7 +176,7 @@ img {
   align-items: center;
   justify-items: center;
   justify-content: center;
-  object-fit: none;
+  object-fit: cover;
 }
 .prev, .next {
   position: absolute;
@@ -269,7 +269,7 @@ right: -15%;
   align-items: center;
   justify-items: center;
   justify-content: center;
-  object-fit: none;
+  object-fit: cover;
 }
 .prev, .next {
   position: relative;
@@ -286,14 +286,14 @@ right: -15%;
     color: #ff2600;
 }
 .prev { 
-left: -30%;
+left: 1%;
 position: absolute;
-padding: 150px;
+padding: 40% 10%;
 }
 .next { 
-left: 45%;
+right: 1%;
 position: absolute;
-padding: 150px;
+padding: 40% 10%;
 }
 .containerText {
     width: 80%;
