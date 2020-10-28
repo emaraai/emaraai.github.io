@@ -264,7 +264,7 @@ right: -15%;
 }
     .carouselContainer {
   max-width: 80%;
-  min-height:  50%;
+  min-height:  20%;
   margin: 5% 10% 0 10%;
   position: relative;   
   overflow: hidden;
