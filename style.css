@@ -69,13 +69,10 @@ img {
     font-size: 13px;
     margin-top: 1px;
 }
-
 .column {
     display: flex;
     flex-direction: column;  
 }
-
-
 #down {
   margin-top: 0%;
   padding-bottom: 0%;
@@ -299,9 +296,9 @@ position: absolute;
 padding: 150px;
 }
 .containerText {
-    width: 70%;
+    width: 80%;
     padding: 5%;
-    margin: 10% 15% 0 15%;
+    margin: 5% 10% 0 10%;
 }
 .column1, .column2, .column3 {
    overflow: auto;
