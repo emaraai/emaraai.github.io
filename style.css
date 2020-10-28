@@ -63,12 +63,7 @@ img {
     z-index: 1;
     text-align: right;
 }
-.bijschrift {
-    width: 70%;
-    line-height: 1.1;
-    font-size: 13px;
-    margin-top: 1px;
-}
+
 .column {
     display: flex;
     flex-direction: column;  
@@ -154,6 +149,12 @@ img {
     width: 90%;
     float: left;
     z-index: 1;   
+}
+    .bijschrift {
+    width: 70%;
+    line-height: 1.1;
+    font-size: 13px;
+    margin-top: 1px;
 }
     .row {
     display: flex;
@@ -246,6 +247,12 @@ right: -15%;
     float: left;
     z-index: 1;
     
+}
+    .bijschrift {
+    width: 100%;
+    line-height: 1.1;
+    font-size: 13px;
+    margin-top: 1px;
 }
     .insta, .mail {
     display: none;
