@@ -20,6 +20,10 @@ body::-webkit-scrollbar, .left::-webkit-scrollbar, .right::-webkit-scrollbar, .s
     display: none;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 a {
     font-family: Helvetica, sans-serif;
     text-decoration-line: none;
@@ -50,18 +54,8 @@ img {
     width: 100%;
     height: 100%;
 }
-nav p {
-    margin: 0 10px 0 0;
-    width: 20%;
-}
-.hoofd {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    width: 90%;
-    float: left;
-    z-index: 1;   
-}
+
+
 .contact {
     right: 0.1%;
     float: right;
@@ -75,56 +69,12 @@ nav p {
     font-size: 13px;
     margin-top: 1px;
 }
-.row {
-    display: flex;
-    flex-direction: row;
-    min-height: 98%;
-}
+
 .column {
     display: flex;
     flex-direction: column;  
 }
-.carouselContainer {
-  width: 60%;
-  height: 600px;
-  margin: 0 auto;
-  padding: 3%;
-  position: relative;   
-  overflow: hidden;
-  z-index: 0;
-  top: 20%;
-}
-.carouselImgs {
-  width: 100%;
-  height: auto;
-  padding: 20px;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-  object-fit: none;
-}
-.prev, .next {
-  position: absolute;
-  top: 10%;
-  cursor: pointer;
-  color: #0048ff;
-  font-size: 30px;
-  font-family: Helvetica, sans-serif;
-  padding: 25%;
-}
-.next:hover, .prev:hover {
-    color: #ff2600;
-}
-.prev { 
-left: -10%; 
-}
-.next { 
-right: -15%;
-}
-.containerText {
-    width: 25%;
-    padding: 10% 10% 0 0;
-}
+
 
 #down {
   margin-top: 0%;
@@ -192,6 +142,67 @@ right: -15%;
 }
 
 
+
+
+@media screen and (min-width: 600px) {
+    nav p {
+    margin: 0 10px 0 0;
+    width: 20%;
+}
+    .hoofd {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    width: 90%;
+    float: left;
+    z-index: 1;   
+}
+    .row {
+    display: flex;
+    flex-direction: row;
+    min-height: 98%;
+}
+    .carouselContainer {
+  width: 60%;
+  height: 600px;
+  margin: 0 auto;
+  padding: 3%;
+  position: relative;   
+  overflow: hidden;
+  z-index: 0;
+  top: 20%;
+}
+.carouselImgs {
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  object-fit: none;
+}
+.prev, .next {
+  position: absolute;
+  top: 10%;
+  cursor: pointer;
+  color: #0048ff;
+  font-size: 30px;
+  font-family: Helvetica, sans-serif;
+  padding: 25%;
+}
+.next:hover, .prev:hover {
+    color: #ff2600;
+}
+.prev { 
+left: -10%; 
+}
+.next { 
+right: -15%;
+}
+.containerText {
+    width: 35%;
+    padding: 10% 10% 0 0;
+}
 .column1, .column2, .column3 {
    overflow: auto;
    padding: 0.5em;
@@ -220,6 +231,7 @@ right: -15%;
   width: 20%;
   padding-top: 30%;
   height: 45%;
+}
 }
 
 @media screen and (max-width: 600px) {
@@ -254,12 +266,13 @@ right: -15%;
   padding-top: 20%;
 }
 .carouselImgs {
-  width: 90%;
+  width: 100%;
   height: auto;
   padding: 5%;
   align-items: center;
   justify-items: center;
   justify-content: center;
+  object-fit: none;
 }
 .prev, .next {
   position: relative;
@@ -276,7 +289,7 @@ right: -15%;
     color: #ff2600;
 }
 .prev { 
-left: -25%;
+left: -30%;
 position: absolute;
 padding: 150px;
 }
@@ -285,13 +298,12 @@ left: 45%;
 position: absolute;
 padding: 150px;
 }
-
 .containerText {
-    width: 80%;
-    padding: 5;
-    margin: 5% 10% 0 10%;
+    width: 70%;
+    padding: 5%;
+    margin: 10% 15% 0 15%;
 }
-    .column1, .column2, .column3 {
+.column1, .column2, .column3 {
    overflow: auto;
    padding: 0.5em;
    clear: none;
@@ -310,8 +322,5 @@ height: 100%;
 .column3 {
   height: 100%;
 }
-
-
-
 
 }
