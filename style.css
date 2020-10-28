@@ -264,7 +264,7 @@ right: -15%;
 }
     .carouselContainer {
   max-width: 80%;
-  height: 350px;
+  min-height:  50%;
   margin: 5% 10% 0 10%;
   position: relative;   
   overflow: hidden;
@@ -273,7 +273,7 @@ right: -15%;
 }
 .carouselImgs {
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 5%;
   align-items: center;
   justify-items: center;
@@ -310,24 +310,7 @@ padding: 25% 10%;
     padding: 1%;
     margin: 1% 10% 0 10%;
 }
-.column1, .column2, .column3 {
-   overflow: auto;
-   padding: 0.5em;
-   clear: none;
-   position: static;
-   width: 90%;
-   overflow: auto;
-   padding-top: 30%;
-}
+.column2 img, .column1 img, .column3 img{
+        padding: 1% 10%;
+    }
     
-.column2 {
-  height: 100%;
-}
-.column1 {
-height: 100%;
-}
-.column3 {
-  height: 100%;
-}
-
-}
