@@ -122,12 +122,7 @@ img {
   overflow-x: auto; 
   align-items: flex-start;
 }
-.slider img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
-}
+
 .slider img.smallImg {
     width: 50%;
     height: 50%;
@@ -202,6 +197,12 @@ right: -15%;
 .containerText {
     width: 35%;
     padding: 10% 10% 0 0;
+}
+.slider img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
 }
 .column1, .column2, .column3 {
    overflow: auto;
@@ -309,6 +310,12 @@ padding: 25% 10%;
 width: 80%;
     padding: 3%;
     margin: 1% 10% 0 10%;
+}
+.slider img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
 }
 .column2 img, .column1 img, .column3 img{
         padding: 1% 10%;
