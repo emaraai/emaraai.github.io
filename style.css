@@ -177,6 +177,7 @@ img {
   justify-items: center;
   justify-content: center;
   object-fit: cover;
+  overflow: hidden;
 }
 .prev, .next {
   position: absolute;
@@ -270,6 +271,7 @@ right: -15%;
   justify-items: center;
   justify-content: center;
   object-fit: cover;
+  overflow: hidden;
 }
 .prev, .next {
   position: relative;
@@ -297,7 +299,7 @@ padding: 25% 10%;
 }
 .containerText {
     width: 80%;
-    padding: 5%;
+    padding: 1%;
     margin: 5% 10% 0 10%;
 }
 .column1, .column2, .column3 {
