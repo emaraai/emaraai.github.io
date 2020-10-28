@@ -52,7 +52,7 @@ i {
 img {
     padding: 0.5%;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 
@@ -125,12 +125,13 @@ img {
 .slider {
   display: flex;
   overflow-x: auto; 
+  align-items: flex-start;
 }
 .slider img {
   width: 100%;
-  height: auto
-  flex-shrink: 0;
+  height: auto;
   max-height: 400px;
+  object-fit: contain;
 }
 .slider img.smallImg {
     width: 50%;
@@ -270,7 +271,7 @@ right: -15%;
   align-items: center;
   justify-items: center;
   justify-content: center;
-  object-fit: cover;
+  object-fit: contain;
   overflow: hidden;
 }
 .prev, .next {
