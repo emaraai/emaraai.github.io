@@ -139,7 +139,7 @@ img {
     position: fixed;
     width: 90%;
     float: left;
-    z-index: 1;   
+    z-index: 2;   
 }
     .bijschrift {
     width: 70%;
@@ -152,48 +152,42 @@ img {
     flex-direction: row;
     min-height: 98%;
 }
-    .carouselContainer {
-  width: 60%;
-  height: 600px;
-  margin: 0 auto;
-  padding: 3%;
-  position: relative;   
-  overflow: hidden;
-  z-index: 0;
-  top: 20%;
-}
-.carouselImgs {
-  width: 100%;
-  height: auto;
-  padding: 20px;
+    
+section {
+  display: flex;
   align-items: center;
-  justify-items: center;
   justify-content: center;
-  object-fit: contain;
-  overflow: hidden;
+  height: 95vh;
 }
-.prev, .next {
+
+section div {
+  width: 600px;
+}
+
+section div.content {
+  padding: 90px 90px 60px 90px;
+  height: 600px;
+}
+    
+div.slides {
+  height: 600px;
+  position: relative;
+}
+
+div.slides img {
   position: absolute;
-  top: 10%;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s;
+}
+div.slides img:hover {
   cursor: pointer;
-  color: #0048ff;
-  font-size: 30px;
-  font-family: Helvetica, sans-serif;
-  padding: 25%;
 }
-.next:hover, .prev:hover {
-    color: #ff2600;
+div.slides img:first-child {
+  z-index: 1;
 }
-.prev { 
-left: -10%; 
-}
-.next { 
-right: -15%;
-}
-.containerText {
-    width: 35%;
-    padding: 10% 10% 0 0;
-}
+    
+    
 .slider img {
   width: 100%;
   height: auto;
@@ -250,7 +244,7 @@ right: -15%;
     position: fixed;
     width: 90%;
     float: left;
-    z-index: 1;
+    z-index: 2;
     
 }
     .bijschrift {
@@ -267,53 +261,39 @@ right: -15%;
     flex-direction: column;
     min-height: 98%;
 }
-    .carouselContainer {
-  min-width: 80%;
-  min-height: 30%;
-  margin: 5% 10% 0 10%;
-  position: relative;   
-  overflow: hidden;
-  z-index: 0;
-  padding-top: 5%;
-}
-.carouselImgs {
-  width: 100%;
-  height: auto;
-  padding: 5%;
+   section {
+  display: flex;
   align-items: center;
-  justify-items: center;
   justify-content: center;
-  object-fit: contain;
-  overflow: hidden;
+  height: 95vh;
 }
-.prev, .next {
+
+section div {
+  width: 400px;
+}
+
+section div.content {
+  padding: 90px 60px 60px 60px;
+  height: 600px;
+}
+    
+div.slides {
+  top: 50px;
+  height: 400px;
   position: relative;
-  top: 20%;
+}
+
+div.slides img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s;
+}
+div.slides img:hover {
   cursor: pointer;
-  color: #0048ff;
-  font-size: 30px;
-  font-family: Helvetica, sans-serif;
 }
-.next:hover {
-    color: #ff2600;
-}
-.prev:hover {
-    color: #ff2600;
-}
-.prev { 
-left: 1%;
-position: absolute;
-padding: 25% 10%;
-}
-.next { 
-right: 1%;
-position: absolute;
-padding: 25% 10%;
-}
-.containerText {
-width: 80%;
-    padding: 3%;
-    margin: 1% 10% 0 10%;
+div.slides img:first-child {
+  z-index: 1;
 }
 .slider img {
   width: 100%;
