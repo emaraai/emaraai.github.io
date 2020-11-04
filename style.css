@@ -273,7 +273,8 @@ section div {
 }
 
 section div.content {
-  padding: 40% 60px 60px 60px;
+  margin: 50% 0 0 0;
+  padding: 2%;
   height: 60%;
 }
     
