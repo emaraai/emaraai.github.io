@@ -273,12 +273,12 @@ section div {
 }
 
 section div.content {
-  padding: 30% 60px 60px 60px;
+  padding: 40% 60px 60px 60px;
   height: 60%;
 }
     
 div.slides {
-  top: 50px;
+  top: 5%;
   height: 30%;
   position: relative;
 }
