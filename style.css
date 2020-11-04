@@ -269,17 +269,17 @@ div.slides img:first-child {
 }
 
 section div {
-  width: 400px;
+  width: 80%;
 }
 
 section div.content {
-  padding: 90px 60px 60px 60px;
-  height: 600px;
+  padding: 30% 60px 60px 60px;
+  height: 60%;
 }
     
 div.slides {
   top: 50px;
-  height: 400px;
+  height: 30%;
   position: relative;
 }
 
