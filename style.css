@@ -3,7 +3,8 @@
     src: url(GT-Super-Text-Book.otf);
 }
 @font-face {
-    font-family: Gt Super Italic;
+    font-family: Gt Super;
+    font-style: italic;
     src: url(GT-Super-Text-Book-Italic.otf);
 }
 html { 
@@ -14,6 +15,7 @@ body {
     color: black;
     width: 99%;
     height: auto;
+    line-height: 1.3;
 }
 
 body::-webkit-scrollbar, .left::-webkit-scrollbar, .right::-webkit-scrollbar, .slider::-webkit-scrollbar, .column1::-webkit-scrollbar, .column2::-webkit-scrollbar, .column3::-webkit-scrollbar {
@@ -30,24 +32,20 @@ a {
     text-decoration: none;
     color: #0048ff;
     font-size: 14px;
-    line-height: 1.3;
 }
 a:hover {
     color: #ff2600;
     text-decoration: line-through;
 }
-
 p {
     font-family: Gt Super;
-    line-height: 1.3;
     display: block;
     text-align: left;
     color: black;
     font-size: 15px;
 }
 i {
-    font-family: Gt Super Italic;
-    font-style: normal;
+    font-style: italic;
 }
 img {
     padding: 0.5%;
@@ -55,264 +53,305 @@ img {
     height: auto;
 }
 
+img.bigImg {
+    max-width: 750px;
+    height: auto;
+}
 
-.contact {
-    right: 0.1%;
-    float: right;
+nav {
     position: fixed;
-    z-index: 1;
-    text-align: right;
+    top: 0.5%;
+    z-index: 2;
+    width: 99vw;
 }
 
-.column {
+nav div.contact {
+    left: 0px;
     display: flex;
-    flex-direction: column;  
+    flex-direction: row;
+    width: 40%;
+    float: right;
+    justify-content: flex-end;
+    
 }
-#down {
-  margin-top: 0%;
-  padding-bottom: 0%;
-  max-height: 800px;
-  scroll-snap-type: y mandatory;
- } 
-#up {
-  margin-top: 0%;
+
+nav div.contact p {
+    margin: 0 5% 0 0;
+    width: 50%;  
+    }
+
+section.up {
+    position: fixed;
+    transform: translate(0, 0);
+    
+    transition: transform 1.5s;
 }
-.downScroll, .upScroll {
+
+
+section.down {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0, 100%);
+        
+    transition: transform 1s;
+}
+
+body.downSection-open section.down {
+    transform: translate(0,0);
+}
+
+body.upSection-close section.up {
+    transform: translate(0,100%);
+}
+
+section.up div.downScroll, section.down div.upScroll {
     width: 100%;
     text-align: center;
     z-index: 1;
     left: 0.5%;
 }
-.downScroll {
+section.up div.downScroll {
     position: sticky;
-    height: 100px;
+    height: 10px;
 }
-.upScroll {
+section.down div.upScroll {
     height: 10px;
     position: absolute;
-    top: 97%;
+    top: 95%;
 }
 
-.moreWork {
-    position: relative;
-}
-
-.groot {
-    max-width: 750px;
-    height: auto;
-}
-.left, .right {
+section.down div.left, section.down div.right {
    height: 100%; 
-   overflow: auto;
-   padding: 0.5em 0.5em 0 0.5em;
+   overflow-y: auto;
+   padding: 0 0.5em 0 0.5em;
    clear: none;
    position: static;
+
 }
-.left {
+section.down div.left {
     float: left;
     max-width: 60%;
 }
-.right {
+section.down div.right {
     float: center;
-    max-width: 40%;  
+    max-width: 40%;
 }
 
-.slider {
+section.down div.slider {
+  width: 100%;
   display: flex;
+  flex-direction: row;
   overflow-x: auto; 
   align-items: flex-start;
 }
 
-
-
-
-
-
 @media screen and (min-width: 600px) {
-    nav p {
-    margin: 0 10px 0 0;
-    width: 20%;
-}
-    .hoofd {
+        
+    nav div.header {
+    left: 0px;
     display: flex;
     flex-direction: row;
-    position: fixed;
-    width: 90%;
+    width: 60%;
     float: left;
-    z-index: 2;   
-}
-    .bijschrift {
-    width: 70%;
+    justify-content: flex-start;
+    }
+    nav div.header a {
+    margin: 0;
+    width: 40%;
+    }
+    nav div.header p {
+    margin: 0 5% 0 0;
+    width: 50%;  
+    }
+    
+    
+    section {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+    
+    section div {
+    width: 100vw;
+    }
+    section div.row {
+    display: flex;
+    flex-direction: row;
+    height: 95vh;
+    padding: 8%;
+    }
+    section div.row div.slides {
+    position: relative;
+    z-index: 1;
+    }
+    section div.row div.slides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    section div.row div.slides img:hover {
+    cursor: pointer;
+    }
+    section div.row div.slides img:first-child {
+    z-index: 1;
+    }
+    section div.row div.slidesText {
+    padding: 90px 90px 60px 90px;
+    }
+    
+    p.caption {
+    width: 80%;
     line-height: 1.1;
     font-size: 13px;
-    margin-top: 1px;
-}
-    .row {
-    display: flex;
-    flex-direction: row;
-    min-height: 98%;
-}
+    margin-top: 1%;
+    position: relative;
+    }
+    section.down div.slider img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    overflow: none;
+    }
+    section.down div.slider img.smallImg {
+    width: 40%;
+    height: 100%;
+    max-height: 400px;
+    } 
     
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 95vh;
-}
-
-section div {
-  width: 600px;
-}
-
-section div.content {
-  padding: 90px 90px 60px 90px;
-  height: 600px;
-}
-    
-div.slides {
-  height: 600px;
-  position: relative;
-}
-
-div.slides img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.5s;
-}
-div.slides img:hover {
-  cursor: pointer;
-}
-div.slides img:first-child {
-  z-index: 1;
-}
-    
-    
-.slider img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: contain;
-}
-.slider img.smallImg {
-    width: 50%;
-    height: 50%;
-    max-height: 200px;
-}
-.columnRow {
+    section.columnRow {
     padding-top: 0%;
-}
-.column1, .column2, .column3 {
-   overflow: auto;
-   padding: 2%;
-   clear: none;
-   position: static;
-   float: left;
-   overflow: auto;
-}
-.column2 {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  padding-top: 1%;
-  height: 100%;
-}
-.column1 {
+    }
+    section.columnRow div.column1, section.columnRow div.column2, section.columnRow div.column3 {
+    overflow: auto;
+    padding: 0 3% 0 3%;
+    clear: none;
+    position: static;
+    float: left;
+    }
+    section.columnRow div.column1 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding-top: 1%;
+    height: 100%;
+    }
+    section.columnRow div.column2 {
     display: flex;
     flex-direction: column;
     width: 40%;
     padding-top: 12%;
     height: 100%;
-}
-.column3 {
-  display:flex;
-  flex-direction: column;
-  width: 25%;
-  padding-top: 30%;
-  height: 100%;
-}
+    }
+    section.columnRow div.column3 {
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+    padding-top: 30%;
+    height: 100%;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    nav p {
-    margin: 0 10px 0 0;
-    width: 80%;
-}
-    .hoofd {
+    
+    body {
+        margin: 1px 1px 1px 1px;
+    }
+    
+    
+    nav div.header {
+    left: 0px;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    width: 90%;
+    width: 50%;
     float: left;
-    z-index: 2;
+    justify-content: flex-start;
+    }
+    nav div.header a {
+    margin: 0;
+    width: 100%;
+    }
+    nav div.header p {
+    margin: 0 5% 0 0;
+    width: 100%;  
+    }
     
-}
-    .bijschrift {
-    width: 95%;
+    nav div.contact {
+    width: 50%;
+    }
+    
+    nav div.contact p {
+    width: 100%;
+    }
+    
+    section {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+    
+    section div {
+    width: 100vw;
+    }
+    section div.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95vh;
+    padding: 8%;
+    }
+    section div.row div.slides {
+    position: relative;
+    z-index: 1;
+    }
+    section div.row div.slides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    section div.row div.slides img:hover {
+    cursor: pointer;
+    }
+    section div.row div.slides img:first-child {
+    z-index: 1;
+    }
+    section div.row div.slidesText {
+    margin: 90% 0 0 0;
+    padding: 4%;
+    height: 60%;
+    }
+    
+    p.caption {
+    width: 80%;
     line-height: 1.1;
     font-size: 13px;
-    margin-top: 1px;
-}
-    .insta, .mail {
-    display: none;
-}
-    .row {
-    display: flex;
-    flex-direction: column;
-    min-height: 98%;
-}
-   section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 95vh;
-}
-
-section div {
-  width: 80%;
-}
-
-section div.content {
-  margin: 50% 0 0 0;
-  padding: 2%;
-  height: 60%;
-}
-    
-div.slides {
-  top: 5%;
-  height: 30%;
-  position: relative;
-}
-
-div.slides img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: transform 0.5s;
-}
-div.slides img:hover {
-  cursor: pointer;
-}
-div.slides img:first-child {
-  z-index: 1;
-}
-.slider img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: contain;
-}
-    .slider img.smallImg {
-    width: 75%;
-    height: 75%;
-}
-    
-    .columnRow {
-        padding-top: 50%;
+    margin-top: 1%;
+    position: relative;
     }
-.column2 img, .column1 img, .column3 img{
-        padding: 1% 10%;
+    section.down div.slider img {
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    overflow: none;
     }
+    section.down div.slider img.smallImg {
+    width: 60%;
+    height: 100%;
+    max-height: 200px;
+    } 
+    
+    section.columnRow {
+    padding-top: 50%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    }
+    section.columnRow div.column1, section.columnRow div.column2, section.columnRow div.column3 {
+    padding: 1% 10%;
+    }
+    
     
 }
     
