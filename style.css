@@ -7,6 +7,12 @@
     font-style: italic;
     src: url(GT-Super-Text-Book-Italic.otf);
 }
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 html { 
     scroll-behavior: smooth;
 }
@@ -31,7 +37,7 @@ a {
     text-decoration-line: none;
     text-decoration: none;
     color: #0048ff;
-    font-size: 14px;
+    font-size: 15px;
 }
 a:hover {
     color: #ff2600;
@@ -42,7 +48,7 @@ p {
     display: block;
     text-align: left;
     color: black;
-    font-size: 15px;
+    font-size: 16px;
 }
 i {
     font-style: italic;
@@ -118,7 +124,7 @@ section.up div.downScroll {
 section.down div.upScroll {
     height: 10px;
     position: absolute;
-    top: 95%;
+    top: 86%;
 }
 
 section.down div.left, section.down div.right {
@@ -178,7 +184,7 @@ section.down div.slider {
     section div.row {
     display: flex;
     flex-direction: row;
-    height: 95vh;
+    height: 86vh;
     padding: 8%;
     }
     section div.row div.slides {
@@ -328,7 +334,7 @@ section.down div.slider {
     z-index: 1;
     }
     section div.row div.slidesText {
-    margin: 80% 0 0 0;
+    margin: 85% 0 0 0;
     padding: 4%;
     height: 50%;
     }
