@@ -146,7 +146,7 @@ section.down div.slider {
   align-items: flex-start;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 750px) {
         
     nav div.header {
     left: 0px;
@@ -253,18 +253,25 @@ section.down div.slider {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     
     body {
         margin: 1px 1px 1px 1px;
     }
     
+    a {
+    font-size: 16px;
+    }
+    
+    p {
+    font-size: 16px;
+    }
     
     nav div.header {
     left: 0px;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 70%;
     float: left;
     justify-content: flex-start;
     }
@@ -278,11 +285,15 @@ section.down div.slider {
     }
     
     nav div.contact {
-    width: 50%;
+    width: 30%;
     }
     
     nav div.contact p {
     width: 100%;
+    }
+    
+    nav div.contact p.witruimteText {
+    display: none;
     }
     
     section {
@@ -298,7 +309,7 @@ section.down div.slider {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 95vh;
+    height: 82vh;
     padding: 8%;
     }
     section div.row div.slides {
@@ -317,9 +328,15 @@ section.down div.slider {
     z-index: 1;
     }
     section div.row div.slidesText {
-    margin: 90% 0 0 0;
+    margin: 80% 0 0 0;
     padding: 4%;
-    height: 60%;
+    height: 50%;
+    }
+    
+    section.down div.upScroll {
+    height: 10px;
+    position: absolute;
+    top: 50%;
     }
     
     p.caption {
@@ -330,7 +347,7 @@ section.down div.slider {
     position: relative;
     }
     section.down div.slider img {
-    width: 100%;
+    width: auto;
     height: 100%;
     max-height: 200px;
     object-fit: contain;
