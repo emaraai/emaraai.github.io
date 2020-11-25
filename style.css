@@ -134,21 +134,10 @@ section.down div.slider {
   display: flex;
   flex-direction: row;
   overflow-x: auto; 
-  align-items: flex-start;
-    
-
+  align-items: flex-start;    
 }
 
-section.down div.slider p a.arrow {
-  position: fixed;
-  top: 25%;
-  left: 1%;
-  display: inherit;
-  font-size: 20px;
-  z-index: 2;
-}
-
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
         
     nav div.header {
     left: 0px;
@@ -273,7 +262,7 @@ section.down div.slider p a.arrow {
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 600px) {
     
     body {
         margin: 1px 1px 1px 1px;
