@@ -137,7 +137,7 @@ section.down div.slider {
   align-items: flex-start;    
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
         
     nav div.header {
     left: 0px;
@@ -262,7 +262,7 @@ section.down div.slider {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     
     body {
         margin: 1px 1px 1px 1px;
