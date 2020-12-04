@@ -42,6 +42,7 @@ a {
 a:hover {
     color: #ff2600;
     text-decoration: line-through;
+    cursor: pointer;
 }
 p {
     font-family: Gt Super;
@@ -70,6 +71,44 @@ nav {
     z-index: 2;
     width: 99vw;
 }
+nav div.header {
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    float: left;
+    justify-content: flex-start;
+    }
+nav div.header a {
+    margin: 0;
+    width: 40%;
+    }
+nav div.header p {
+    margin: 0 5% 0 0;
+    width: 50%;  
+    }
+nav div.contact {
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    float: right;
+    justify-content: flex-end;
+    
+    }
+nav div.contact p {
+    margin: 0 5% 0 0;
+    width: 50%;  
+    }
+
+section {
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+section div {
+    width: 100vw;
+    }
 
 section.up {
     position: fixed;
@@ -77,7 +116,34 @@ section.up {
     
     transition: transform 1.5s;
 }
+section div.row {
+    display: flex;
+    flex-direction: row;
+    height: 86vh;
+    padding: 8%;
+    }
 
+section div.row div.slides {
+    position: relative;
+    z-index: 1;
+    }
+
+section div.row div.slides img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+section div.row div.slides img:hover {
+    cursor: url(Rarrow.cur) 16 16, auto;
+}
+
+section div.row div.slides img:first-child {
+    z-index: 1;
+    }
+
+section div.row div.arrow {
+    display: none;
+}
 
 section.down {
     position: fixed;
@@ -91,7 +157,6 @@ section.down {
 body.downSection-open section.down {
     transform: translate(0,0);
 }
-
 body.upSection-close section.up {
     transform: translate(0,100%);
 }
@@ -114,120 +179,78 @@ section.down div.upScroll {
 
 section.down div.left, section.down div.right {
    height: 100%; 
-   overflow-y: auto;
+   overflow: auto;
    padding: 0 0.5em 0 0.5em;
    clear: none;
    position: static;
-
+    
+   transition: max-width 0.10s;
 }
 section.down div.left {
     float: left;
     max-width: 60%;
-}
+    }
 section.down div.right {
     float: center;
     max-width: 40%;
-}
+    }
+
+body.leftColumn-open div.left, body.rightColumn-open div.right {
+    max-width: 80%;
+    align-content: center:
+    }
+body.leftColumn-open div.right, body.rightColumn-open div.left {
+    max-width: 20%;
+    }
+body.leftColumn-open div.left div.slider, body.rightColumn-open div.right div.slider {
+    max-height: 800px;
+    }
 
 section.down div.slider {
   width: 100%;
   display: flex;
   flex-direction: row;
   overflow-x: auto; 
-  align-items: flex-start;    
+  align-items: flex-start;
+    
+  max-height: 400px;
+    
+  transition: max-height 0.5s;
 }
 
-@media screen and (min-width: 768px) {
-        
-    nav div.header {
-    left: 0px;
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-    float: left;
-    justify-content: flex-start;
-    }
-    nav div.header a {
-    margin: 0;
-    width: 40%;
-    }
-    nav div.header p {
-    margin: 0 5% 0 0;
-    width: 50%;  
-    }
-    
-    nav div.contact {
-    left: 0px;
-    display: flex;
-    flex-direction: row;
-    width: 40%;
-    float: right;
-    justify-content: flex-end;
-    
-    }
-
-    nav div.contact p {
-    margin: 0 5% 0 0;
-    width: 50%;  
-    }
-    
-    
-    section {
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    }
-    
-    section div {
-    width: 100vw;
-    }
-    section div.row {
-    display: flex;
-    flex-direction: row;
-    height: 86vh;
-    padding: 8%;
-    }
-    section div.row div.slides {
-    position: relative;
-    z-index: 1;
-    }
-    section div.row div.slides img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    }
-    section div.row div.slides img:hover {
-    cursor: pointer;
-    }
-    section div.row div.slides img:first-child {
-    z-index: 1;
-    }
-    section div.row div.slidesText {
-    padding: 90px 90px 60px 90px;
-    }
-    
-    p.caption {
+p.caption {
     width: 80%;
     line-height: 1.1;
     font-size: 13px;
     margin-top: 1%;
     position: relative;
     }
-    section.down div.slider img {
+p.captionWR {
+    width: 80%;
+    line-height: 1.1;
+    font-size: 13px;
+    margin-top: 1%;
+    position: relative;
+    }
+
+section.down div.slider img {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: inherit;
     object-fit: contain;
     overflow: none;
-        
-    transform: translateX(0);
     }
-    
-    section.down div.slider img.smallImg {
+section.down div.slider img.smallImg {
     width: 40%;
     height: 100%;
-    max-height: 400px;
+    max-height: inherit;
     } 
+
+@media screen and (min-width: 768px) {
+
+    section div.row div.slidesText {
+    padding: 90px 90px 60px 90px;
+    }
     
     section.columnRow {
     padding-top: 0%;
@@ -246,6 +269,7 @@ section.down div.slider {
     padding-top: 1%;
     height: 100%;
     }
+    
     section.columnRow div.column2 {
     display: flex;
     flex-direction: column;
@@ -260,6 +284,8 @@ section.down div.slider {
     padding-top: 30%;
     height: 100%;
     }
+    
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -277,72 +303,43 @@ section.down div.slider {
     }
     
     nav div.header {
-    left: 0px;
-    display: flex;
     flex-direction: column;
     width: 70%;
-    float: left;
-    justify-content: flex-start;
     }
     nav div.header a {
-    margin: 0;
     width: 100%;
     }
     nav div.header p {
-    margin: 0 5% 0 0;
     width: 100%;  
     }
-    
     nav div.contact {
-    left: 0px;
-    display: flex;
-    flex-direction: row;
     width: 30%;
     float: right;
-    justify-content: flex-end;
-    
 }
-
-nav div.contact p {
-    margin: 0 5% 0 0;
+    nav div.contact p {
     width: 100%;  
     }
-    
     nav div.contact p.witruimteText {
     display: none;
     }
     
-    section {
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    }
-    
-    section div {
-    width: 100vw;
-    }
     section div.row {
-    display: flex;
     flex-direction: column;
     align-items: center;
     height: 82vh;
-    padding: 8%;
     }
-    section div.row div.slides {
-    position: relative;
-    z-index: 1;
-    }
-    section div.row div.slides img {
-    position: absolute;
-    top: 0;
+    
+    section div.row div.arrow {    
+    position: fixed;
+    top: 40%;
     left: 0;
+        
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+        
     }
-    section div.row div.slides img:hover {
-    cursor: pointer;
-    }
-    section div.row div.slides img:first-child {
-    z-index: 1;
-    }
+    
     section div.row div.slidesText {
     margin: 85% 0 0 0;
     padding: 4%;
@@ -353,26 +350,55 @@ nav div.contact p {
     height: 10px;
     position: absolute;
     top: 50%;
+    display: inherit;
     }
     
-    p.caption {
-    width: 80%;
-    line-height: 1.1;
-    font-size: 13px;
-    margin-top: 1%;
-    position: relative;
+    section.down div.left {
+    max-width: 50%;
     }
+    section.down div.right {
+    max-width: 50%;
+    }
+    
+    body.leftColumn-open div.left, body.rightColumn-open div.right {
+        max-width: 95%;
+        align-content: center:
+    }
+    body.leftColumn-open div.right, body.rightColumn-open div.left {
+        max-width: 0%;
+    }
+    body.leftColumn-open div.left div.slider {
+        max-height: 600px;
+    }
+    body.rightColumn-open div.right div.slider {
+        max-height: 400px;
+    }
+    body.leftColumn-open div.left p.caption, body.rightColumn-open div.right p.caption {
+        display: inherit;
+    }
+    
+    section.down div.slider {
+    max-height: 200px;
+    }
+
+    p.caption {
+    width: 100%;
+    display: none;
+    }
+    p.captionWR {
+    width: 100%;
+    display: block;
+    }
+    
     section.down div.slider img {
     width: auto;
     height: 100%;
-    max-height: 200px;
-    object-fit: contain;
-    overflow: none;
+    max-height: inherit;
     }
     section.down div.slider img.smallImg {
     width: 60%;
     height: 100%;
-    max-height: 200px;
+    max-height: inherit;
     } 
     
     section.columnRow {
