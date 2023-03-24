@@ -17,7 +17,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: none;
+    background: white;
     color: black;
     width: 99%;
     height: auto;
@@ -34,10 +34,12 @@ body::-webkit-scrollbar, .left::-webkit-scrollbar, .right::-webkit-scrollbar, .s
 
 a {
     font-family: Helvetica, sans-serif;
+    font-weight: 400;
     text-decoration-line: none;
     text-decoration: none;
     color: #0048ff;
     font-size: 15px;
+    -webkit-text-stroke: 0px #000;
 }
 a:hover {
     color: #ff2600;
@@ -45,11 +47,12 @@ a:hover {
     cursor: pointer;
 }
 p {
-    font-family: Gt Super;
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
     display: block;
     text-align: left;
     color: black;
-    font-size: 16px;
+    font-size: 15px;
 }
 i {
     font-style: italic;
@@ -69,7 +72,7 @@ nav {
     position: fixed;
     top: 0.5%;
     z-index: 2;
-    width: 99vw;
+    width: 98vw;
 }
 nav div.header {
     left: 0px;
@@ -107,7 +110,7 @@ section {
     height: 100vh;
     }
 section div {
-    width: 100vw;
+    width: 98vw;
     }
 
 section.up {
@@ -116,65 +119,25 @@ section.up {
     
     transition: transform 1.5s;
 }
-section div.row {
-    display: flex;
-    flex-direction: row;
-    height: 86vh;
-    padding: 8%;
-    }
-
-section div.row div.slides {
-    position: relative;
-    z-index: 1;
-    }
-
-section div.row div.slides img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    }
-section div.row div.slides img:hover {
-    cursor: url(Rarrow.cur) 16 16, auto;
-}
-
-section div.row div.slides img:first-child {
-    z-index: 1;
-    }
-
-section div.row div.arrow {
-    display: none;
-}
 
 section.down {
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate(0, 100%);
+    transform: translate(0, 0);
         
     transition: transform 1s;
 }
 
-body.downSection-open section.down {
-    transform: translate(0,0);
-}
-body.upSection-close section.up {
-    transform: translate(0,100%);
-}
 
-section.up div.downScroll, section.down div.upScroll {
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-    left: 0.5%;
-}
-section.up div.downScroll {
-    position: sticky;
-    height: 10px;
-}
 section.down div.upScroll {
+    width: 98%;
+    text-align: right;
+    z-index: 1;
+    left: 0%;
     height: 10px;
     position: absolute;
-    top: 86%;
+    top: 94%;
 }
 
 section.down div.left, section.down div.right {
@@ -185,22 +148,26 @@ section.down div.left, section.down div.right {
    position: static;
     
    transition: max-width 0.10s;
+   transition: margin-right 0.10s;
 }
 section.down div.left {
     float: left;
-    max-width: 60%;
+    max-width: 30%;
+    margin-right: 10%;
     }
 section.down div.right {
     float: center;
-    max-width: 40%;
+    max-width: 30%;
     }
 
 body.leftColumn-open div.left, body.rightColumn-open div.right {
     max-width: 80%;
+    margin-right: 0%;
     align-content: center:
     }
 body.leftColumn-open div.right, body.rightColumn-open div.left {
     max-width: 20%;
+    margin-right: 0%;
     }
 body.leftColumn-open div.left div.slider, body.rightColumn-open div.right div.slider {
     max-height: 800px;
@@ -212,25 +179,22 @@ section.down div.slider {
   flex-direction: row;
   overflow-x: auto; 
   align-items: flex-start;
+  margin: 2% 0;
     
-  max-height: 400px;
+  max-height: 70%;
     
   transition: max-height 0.5s;
 }
 
 p.caption {
-    width: 80%;
+    width: 100%;
     line-height: 1.1;
     font-size: 13px;
     margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 5%;
     position: relative;
-    }
-p.captionWR {
-    width: 80%;
-    line-height: 1.1;
-    font-size: 13px;
-    margin-top: 1%;
-    position: relative;
+    -webkit-text-stroke: 1.2px #000;
     }
 
 section.down div.slider img {
@@ -323,41 +287,19 @@ section.down div.slider img.smallImg {
     display: none;
     }
     
-    section div.row {
-    flex-direction: column;
-    align-items: center;
-    height: 82vh;
-    }
-    
-    section div.row div.arrow {    
-    position: fixed;
-    top: 40%;
-    left: 0;
-        
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-        
-    }
-    
-    section div.row div.slidesText {
-    margin: 85% 0 0 0;
-    padding: 4%;
-    height: 50%;
-    }
-    
     section.down div.upScroll {
     height: 10px;
     position: absolute;
-    top: 50%;
+    top: 90%;
     display: inherit;
     }
     
     section.down div.left {
     max-width: 50%;
+    margin-right: 0%;
     }
     section.down div.right {
-    max-width: 50%;
+    max-width: 40%;
     }
     
     body.leftColumn-open div.left, body.rightColumn-open div.right {
