@@ -1,14 +1,3 @@
-/* Fonts */
-@font-face {
-  font-family: "Gt Super";
-  src: url("GT-Super-Text-Book.otf");
-}
-@font-face {
-  font-family: "Gt Super";
-  font-style: italic;
-  src: url("GT-Super-Text-Book-Italic.otf");
-}
-
 /* Base Styles */
 body {
   background: white;
@@ -129,6 +118,7 @@ nav.contact-page .about p:first-child {
 
 .carousel-slides {
   display: flex;
+  align-items: flex-start; /* <— this aligns images to the top */
   transition: transform 0.4s ease;
   width: 100%;
 }
@@ -138,7 +128,7 @@ nav.contact-page .about p:first-child {
   width: 100%;
   height: auto;
   object-fit: contain;
-  padding: 0; /* Optional: remove spacing if desired */
+  object-position: top; /* <— ensures images are positioned at the top within their box */
 }
 
 /* Arrows on image sides */
